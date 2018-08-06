@@ -13,8 +13,9 @@ class Patient {
    takeCare(){
 
    } 
-   paye(){
-
+   paye(quoi, qui){
+        var solde = (this.argent -= quoi);
+        qui.argent += solde;
    }
 }
 

@@ -23,13 +23,33 @@ var cimetiere = [];
 console.log(debug.salleDattente);
 setTimeout(() => {
     debug.patientIn();    
-}, 2000);
+}, 1000);
 setTimeout(() => {
     console.log(debug.salleDattente);    
+}, 2000);
+setTimeout(() => {
+    console.log(debug.cabinet)
+}, 3000);
+setTimeout(() => {
+    debug.diagnostique()
 }, 4000);
 setTimeout(() => {
-    
-    console.log(debug.cabinet)
-}, 6000);
+    console.log(debug.cabinet[1].argent)
+}, 8000);
+setTimeout(() => {
+    console.log(debug.argent)
+}, 9000);
+setTimeout(() => {
+    debug.cabinet[1].paye(prixConsultation, debug)
+}, 10000);
+setTimeout(() => {
+    console.log(debug.cabinet[1].argent)
+}, 12000);
+setTimeout(() => {
+    console.log(debug.argent)
+}, 14000);
+// setTimeout(() => {
+//     debug.cabinet[1].paye(prixConsultation)
+// }, 8000);
 
 // chat.miauler()
