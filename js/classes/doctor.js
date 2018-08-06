@@ -5,10 +5,11 @@ class Doctor {
         this.salleDattente = salleDattente;
         this.cabinet = cabinet;
     }
-    diagnostique(){
-
-    }
     patientIn(){
+        var patientAexaminer = this.salleDattente.shift();
+        this.cabinet.push(patientAexaminer)
+    }
+    diagnostique(){
 
     }
     patientOut(){
