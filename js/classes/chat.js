@@ -1,4 +1,4 @@
-class Chaton{
+class Chat{
     constructor(race, nom){
         this.race=race;
         this.nom=nom;
@@ -11,4 +11,4 @@ class Chaton{
     }
 }
 
-export { Chaton }
+export { Chat }

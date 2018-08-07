@@ -7,8 +7,8 @@ class Patient {
         this.etatSante = etatSante;
         this.traitement = traitement;
     }
-   goTo(){
-
+   goTo(param1, param2){
+    param2.push(param1.pop())
    }
    takeCare(){
 
