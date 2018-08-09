@@ -32,7 +32,12 @@ class Doctor {
                 default:
                 traitement = "Wtf!! Je ne sais pas de quelle maladie vous souffrez.";
             }
-            console.log("Afin de vous soigner, il vous faudra prendre le traitement suivant: " + traitement + " :-) !")
+            this.cabinet[1].traitement = traitement;
+            this.cabinet[1].etatSante = "diagnostiqué";
+            setTimeout(() => {
+                console.log("Vous m'avez consulté et votre état de santé est mainttenat: " + this.cabinet[1].etatSante);
+                console.log("Afin de vous soigner, il vous faudra prendre le traitement suivant: " + traitement + " :-) !");
+            }, 200);
         }, 6000);
     }
     patientOut(){
