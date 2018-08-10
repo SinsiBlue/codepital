@@ -50,15 +50,15 @@ var hopital = {
                 debug.diagnostique()
             }, 4000);
             setTimeout(() => {
-                console.log(debug.cabinet[1].argent);
-                console.log(debug.argent)
+                console.log("Argent de " + debug.cabinet[1].nom + " AVANT payement: " + debug.cabinet[1].argent);
+                console.log("Argent de " + debug.nom + " AVANT payement: " + debug.argent)
             }, 8000);
             setTimeout(() => {
                 debug.cabinet[1].paye(prixConsultation, debug)
             }, 9000);
             setTimeout(() => {
-                console.log(debug.cabinet[1].argent);
-                console.log(debug.argent)
+                console.log("Argent de " + debug.cabinet[1].nom + " APRES payement: " + debug.cabinet[1].argent);
+                console.log("Argent de " + debug.nom + " APRES payement: " + debug.argent)
             }, 9500);
             setTimeout(() => {
                 debug.patientOut()
@@ -77,7 +77,7 @@ var hopital = {
                 console.log(pharmacie)
             }, 14000);
             setTimeout(() => {
-                pharmacie.contenu[0].achete(pharmacie, cimetiere, vieNormale);
+                pharmacie.contenu[0].paye(pharmacie, cimetiere);
             }, 18000);
             setTimeout(() => {
                 if (pharmacie.contenu.length >= 1) {
@@ -91,7 +91,24 @@ var hopital = {
             }, 26000);
 
         } else {
-            console.log("Yes ! Il n'y a plus de patients. Ma journée est finie :-).")
+            console.log("Yes ! Il n'y a plus de patients. Ma journée est finie :-).");
+            setTimeout(() => {
+                console.log("Avant de partir, je vais voir comment se portent mes patients d'aujourd'hui...");
+                setTimeout(() => {
+                    console.log(vieNormale);                        
+                    console.log("Sont dans la vie normale:");
+                    setTimeout(() => {
+                        vieNormale.contenu.forEach(function(element){console.log("          " + element.nom)});
+                    }, 100);
+                    setTimeout(() => {
+                        console.log(cimetiere);
+                        console.log("Sont morts:");                        
+                    }, 150);
+                    setTimeout(() => {
+                        cimetiere.contenu.forEach(function(element){console.log("          " + element.nom)});
+                    }, 200);
+                }, 250);
+            }, 500);
         }
     }
 }
