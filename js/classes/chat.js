@@ -4,8 +4,8 @@ class Chat{
         this.nom=nom;
     }
     miauler(){
+        console.log("miawou");
         setTimeout(() => {
-            console.log("miawou");
             this.miauler();
         }, 2000);
     }

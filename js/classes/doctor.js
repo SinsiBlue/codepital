@@ -35,7 +35,7 @@ class Doctor {
             this.cabinet[1].traitement = traitement;
             this.cabinet[1].etatSante = "diagnostiqué";
             setTimeout(() => {
-                console.log("Vous m'avez consulté et votre état de santé est mainttenat: " + this.cabinet[1].etatSante);
+                console.log("Vous m'avez consulté et votre état de santé est mainttenant: " + this.cabinet[1].etatSante);
                 console.log("Afin de vous soigner, il vous faudra prendre le traitement suivant: " + traitement + " :-) !");
             }, 200);
         }, 6000);
